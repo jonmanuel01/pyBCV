@@ -28,7 +28,7 @@ class Bank:
         self.result = []
 
     def _load(self):
-        response = _ensure_200_response('https://www.bcv.org.ve/cambiaria/export/tasas-informativas-sistema-bancario')
+        response = _ensure_200_response('https://www.bcv.org.ve/tasas-informativas-sistema-bancario')
         soup = BeautifulSoup(response.content, "html.parser")
 
         table_rows = soup.find_all('tr')
